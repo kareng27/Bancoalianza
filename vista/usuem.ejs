@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Banco Alianza</title>
+  <script src="js/jquery-3.6.0.min.js"></script>
+  <script src="js/actualizar.js"></script>
+  <script src="js/eliminar.js"></script>
+  <link rel="shortcut icon" href="imagenes/simbolo.PNG">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+  <link rel="stylesheet" href="css/estilo.css">
+</head>
+
+<body background="imagenes/fonformularios.PNG"></body>
+
+  <div class="menu-btn">
+    <i class="fas fa-bars fa-2x"></i>
+  </div>
+
+  <div class="container">
+    <nav class="nav-main">
+      <img src="imagenes/logo1.PNG" alt="TechNews Logo" class="nav-brand">
+      
+      
+      <div class="logoa">
+        <p><%= uss %></p>
+          <img src="imagenes/u.jpeg" alt="">
+          <button><a href="cerrar">Cerrar sesion</a></button>
+      </div>
+
+      
+    </nav>
+    <hr>
+
+    <br>
+
+    <a href="/vistaempleado">Click para volver a Menu Principal</a>
+                     
+
+    <div class="entry-form">
+      <form action="/frminsertar" method="POST">
+        <h2>Usuario</h2>
+          <input type="text" name="UsuDoc" class="form-control" placeholder="Documento" required="">
+          <input type="text" name="UsuNom" class="form-control" placeholder="Nombre" required="">
+          <input type="password" name="UsuClave" class="form-control" placeholder="Clave" required=""><br>
+          <input type="text" name="UsuRol" class="form-control" placeholder="Rol" required="">
+          <input type="text" name="UsuEstado" class="form-control" placeholder="Estado" required="">
+          <input type="text" name="UsuImagen" class="form-control" placeholder="Imagen" required="">
+          <button class="submit-btn form-control" id="form-submit">Siguiente</button>
+           <!--<input type="email" name="email" class="form-control" placeholder="Your email address" required="">
+          <input type="date" name="fecha" class="form-control" placeholder="Your email address" required="">
+                               
+          <select name="Rol" placeholder="Rol" class="form-control">
+          <option >Rol</option><option value="Cliente">Cliente</option> <option value="Empleado">Empleado</option>
+          </select><br>
+          <select name="Estado" placeholder="Estado" class="form-control">
+          <option >Estado</option><option value="Activo">Activo</option> <option value="Inactivo">Inactivo</option>
+          </select><br>-->
+      </form>
+    </div>
+
+ </section>
+
+ <from action="" name="frm" id="frm">
+  <table class="table">
+      <thead>
+          <tr>
+
+              <th>Documento</th>
+              <th>USUARIO</th>
+              <th>CLAVE</th>
+              <th>ROL</th>
+              <th>ESTADO</th>
+              <th>IMAGEN</th>
+              <th>ACTUALIZAR</th>
+              <th>ELIMINAR</th>
+
+          </tr>
+      </thead>
+
+      <tbody>
+       <% datos.forEach(function (datos){ %>    
+          <tr>
+              <td><input type="text" value="<%=datos.UsuDoc%>" name="doccli" id="doc" class="doc"></td>
+              <td><input type="text" value="<%=datos.UsuNom%>" name="nomusu" id="usu" class="usu"></td>
+              <td><input type="text" value="<%=datos.UsuClave%>" name="clave" id="cla" class="cla"></td>
+              <td><input type="text" value="<%=datos.UsuRol%>" name="rol" id="rol" class="rol"></td>
+              <td><input type="text" value="<%=datos.UsuEstado%>" name="estado" id="est" class="est"></td>
+              <td><input type="text" value="<%=datos.UsuImagen%>" name="imagen" id="img" class="img"></td>
+              <td><input type="submit" value="Actualizar" name="btnact" id="btnact" class="btnact"></td>
+              <td><input type="submit" value="Eliminar" name="btneli" id="btneli" class="btneli"></td>
+          </tr>
+       <%})%>
+      </tbody>
+  </table>
+</from>
+
+<script src="https://unpkg.com/scrollreveal"></script>
+<script src="js/main.js"></script>
+
+</body>
+
+</html>

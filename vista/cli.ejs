@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Banco Alianza</title>
+  <script src="js/jquery-3.6.0.min.js"></script>
+  <script src="js/actualizarcli.js"></script>
+  <script src="js/eliminarcli.js"></script>
+  <link rel="shortcut icon" href="imagenes/simbolo.PNG">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+  <link rel="stylesheet" href="css/estilo.css">
+</head>
+
+<body background="imagenes/fonformularios.PNG"></body>
+
+  <div class="menu-btn">
+    <i class="fas fa-bars fa-2x"></i>
+  </div>
+
+  <div class="container">
+    <nav class="nav-main">
+      <img src="imagenes/logo1.PNG" alt="TechNews Logo" class="nav-brand">
+      
+      
+      <div class="logoa">
+        <p><%= uss %></p>
+          <img src="imagenes/u.jpeg" alt="">
+          <button><a href="cerrar">Cerrar sesion</a></button>
+      </div>
+
+      
+    </nav>
+    <hr>
+
+    <br>
+   
+    <a href="/vistaadministrador">Click para volver a Menu Principal</a>
+
+                     
+
+                     <div class="entry-form1">
+                          <form class="marco" action="/frminsertarcli" method="post">
+                               <h2>Cliente</h2>
+                               <input type="text" name="CliDoc" class="form-control1" placeholder="Documento" required="">
+                               <input type="text" name="CliNom" class="form-control1" placeholder="Nombre" required="">
+                               <input type="text" name="CliApe" class="form-control1" placeholder="Apellido" required="">
+                               <input type="email" name="CliCorreo" class="form-control1" placeholder="Correo" required=>
+                               <input type="tel" name="CliCelular" class="form-control1" placeholder="Celular" required=""><br>
+                               <input type="text" name="CliSexo" class="form-control1" placeholder="Sexo" required=""><br>
+                               Fecha de Nacimiento: <input type="date" name="CliFechaNac" class="form-control1" required=""><br>
+                               <button class="submit-btn form-control" id="form-submit">Siguiente</button>
+
+                              
+                              </form>
+                     </div>
+
+ </section>
+
+
+
+ <from action="" name="frm" id="frm">
+  <table class="table">
+      <thead>
+          <tr>
+
+              <th>Documento</th>
+              <th>NOMBRE</th>
+              <th>APELLIDO</th>
+              <th>CORREO</th>
+              <th>CELULAR</th>
+              <th>SEXO</th>
+              <th>DATE</th>
+              <th>ACTUALIZAR</th>
+              <th>ELIMINAR</th>
+
+
+          </tr>
+      </thead>
+
+      <tbody>
+       <% datos.forEach(function (datos){ %>    
+          <tr>
+              <td><input type="text" value="<%=datos.CliDoc%>" name="documento" id="doc" class="doc"></td>
+              <td><input type="text" value="<%=datos.CliNom%>" name="nombre" id="nom" class="nom"></td>
+              <td><input type="text" value="<%=datos.CliApe%>" name="apellido" id="ape" class="ape"></td>
+              <td><input type="text" value="<%=datos.CliCorreo%>" name="correo" id="cor" class="cor"></td>
+              <td><input type="text" value="<%=datos.CliCelular%>" name="celular" id="cel" class="cel"></td>
+              <td><input type="text" value="<%=datos.CliSexo%>" name="sexo" id="sexo" class="sexo"></td>
+              <td><input type="text" value="<%=datos.CliFechaNac%>" name="fecha" id="fec" class="fec"></td>
+              <td><input type="submit" value="Actualizar" name="btnact" id="btnact" class="btnact"></td>
+              <td><input type="submit" value="Eliminar" name="btneli" id="btneli" class="btneli"></td>
+          </tr>
+       <%})%>
+      </tbody>
+  </table>
+</from>
+
+
+<script src="https://unpkg.com/scrollreveal"></script>
+<script src="js/main.js"></script>
+
+</body>
+
+</html>

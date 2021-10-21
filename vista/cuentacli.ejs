@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Banco Alianza</title>
+  <script src="js/jquery-3.6.0.min.js"></script>
+  <script src="js/eliminarcuen.js"></script>
+  <link rel="shortcut icon" href="imagenes/simbolo.PNG">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+  <link rel="stylesheet" href="css/estilo.css">
+  <link rel="stylesheet" href="css/cliente.css">
+  
+</head>
+
+<body background="imagenes/fonformularios.PNG"></body>
+
+  <div class="menu-btn">
+    <i class="fas fa-bars fa-2x"></i>
+  </div>
+
+  <div class="container">
+    <nav class="nav-main">
+      <img src="imagenes/logo1.PNG" alt="TechNews Logo" class="nav-brand">
+      
+      
+      <div class="logoa">
+        <p><%= uss %></p>
+          <img src="imagenes/u.jpeg" alt="">
+          <button><a href="cerrar">Cerrar sesion</a></button>
+      </div>
+
+      
+    </nav>
+ 
+    <hr>
+
+    <br>
+    
+    <a href="/vistacli">Click para volver a Menu Principal</a>
+
+  
+
+ <from action="" name="frm" id="frm">
+  <table class="table1">
+      <thead>
+          <tr>
+
+              <th>CODIGO</th>
+              <th>Documento</th>
+              <th>TIPO</th>
+              <th>SALDO</th>
+              <th>TRANSFERENCIAS</th>
+              <th>RETIROS</th>
+              <th>CONSIGNACIONES</th>
+
+          </tr>
+      </thead>
+
+      <tbody>
+       <% datos.forEach(function (datos){ %>    
+          <tr>
+              <td><input type="text" value="<%=datos.CueCod%>" name="codigo" id="cod" class="cod"></td>
+              <td><input type="text" value="<%=datos.CueDoc%>" name="CueDoc" id="doc" class="doc"></td>
+              <td><input type="text" value="<%=datos.CueTipo%>" name="cuetipo" id="cuetipo" class="cuetipo"></td>
+              <td><input type="text" value="<%=datos.CueSaldo%>" name="cuesaldo" id="cuesaldo" class="cuesaldo"></td>
+              <td><a href="/tran"><input type="submit" value="Transferir" name="btntran" id="btntran" class="btntran"></a></td>
+              <td><a href="/retirar"><input type="submit" value="Retirar" name="btnreti" id="btnreti" class="btnreti"></a></td>
+              <td><a href="/consignar"><input type="submit" value="Consignar" name="btncon" id="btncon" class="btncon"></a></td>
+              
+            </tr>
+       <%})%>
+      </tbody>
+  </table>
+</from>
+
+<script src="https://unpkg.com/scrollreveal"></script>
+<script src="js/main.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Banco Alianza</title>
+  <script src="js/jquery-3.6.0.min.js"></script>
+  <script src="js/actualizarline.js"></script>
+  <script src="js/eliminarline.js"></script>
+  <link rel="shortcut icon" href="imagenes/simbolo.PNG">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+  <link rel="stylesheet" href="css/estilo.css">
+  <link rel="stylesheet" href="css/cliente.css">
+</head>
+
+<body background="imagenes/fonformularios.PNG"></body>
+
+  <div class="menu-btn">
+    <i class="fas fa-bars fa-2x"></i>
+  </div>
+
+  <div class="container">
+    <nav class="nav-main">
+        
+      <img src="imagenes/logo1.PNG" alt="TechNews Logo" class="nav-brand">
+    
+      <ul class="menu">
+        <li>
+          <a href="#">Menu Principal-Cliente
+          </a>
+        </li>
+      </ul>
+      
+      
+      
+      <div class="logoa">
+        <p><%= uss %></p>
+          <img src="imagenes/u.jpeg" alt="">
+          <button><a href="cerrar">Cerrar sesion</a></button>
+      </div>
+
+      
+    </nav>
+    <hr>
+
+    <br>
+
+
+
+
+    <section class="contenedor">
+
+        <div id="cajauno" class="cajas">
+
+            <div class="titulocaja"><a href="/usucli">Datos de Usuario</a></div>
+
+        </div>
+
+        <div id="cajauno" class="cajas">
+
+            <div class="titulocaja"><a href="/lineas_creditocli">Lineas de credito</a></div>
+
+        </div>
+
+        <div id="cajauno" class="cajas">
+
+            <div class="titulocaja"><a href="/credito_clientecli">Creditos</a></div>
+
+        </div>
+
+        <div id="cajauno" class="cajas">
+
+            <div class="titulocaja"><a href="/cuentacli">Cuentas</a></div>
+
+        </div>
+
+        
+        
+
+    </section>
+
+
+
+    <from action="" name="frm" id="frm">
+      <table class="table">
+          <thead>
+              <tr>
+    
+                  <th>Documento</th>
+                  <th>NOMBRE</th>
+                  <th>APELLIDO</th>
+                  <th>CORREO</th>
+                  <th>CELULAR</th>
+                  <th>SEXO</th>
+                  <th>DATE</th>
+    
+    
+              </tr>
+          </thead>
+    
+          <tbody>
+           <% datos.forEach(function (datos){ %>    
+              <tr>
+                  <td><input type="text" value="<%=datos.CliDoc%>" name="documento" id="doc" class="doc"></td>
+                  <td><input type="text" value="<%=datos.CliNom%>" name="nombre" id="nom" class="nom"></td>
+                  <td><input type="text" value="<%=datos.CliApe%>" name="apellido" id="ape" class="ape"></td>
+                  <td><input type="text" value="<%=datos.CliCorreo%>" name="correo" id="cor" class="cor"></td>
+                  <td><input type="text" value="<%=datos.CliCelular%>" name="celular" id="cel" class="cel"></td>
+                  <td><input type="text" value="<%=datos.CliSexo%>" name="sexo" id="sexo" class="sexo"></td>
+                  <td><input type="text" value="<%=datos.CliFechaNac%>" name="fecha" id="fec" class="fec"></td>
+              </tr>
+           <%})%>
+          </tbody>
+        </table>
+      </from>
+
+
+                     
+
+                   
+
+<script src="https://unpkg.com/scrollreveal"></script>
+<script src="js/main.js"></script>
+
+</body>
+
+</html>
