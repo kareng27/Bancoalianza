@@ -42,6 +42,8 @@ rutas.get('/usucli',controller.consultageneralusucli);
 //rutas.get('/',controller.consultalineas);
 
 rutas.post('/frminsertar',controller.insertar)
+
+
 rutas.post('/frminsertarcli',controller.insertarcli)
 rutas.post('/frminsertarcliem',controller.insertarcliem)
 

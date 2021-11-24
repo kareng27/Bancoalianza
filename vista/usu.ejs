@@ -8,6 +8,7 @@
   <script src="js/jquery-3.6.0.min.js"></script>
   <script src="js/actualizar.js"></script>
   <script src="js/eliminar.js"></script>
+  <script src="js/insertarusuario.js"></script>
   <link rel="shortcut icon" href="imagenes/simbolo.PNG">
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
@@ -43,13 +44,13 @@
     <div class="entry-form">
       <form action="/frminsertar" method="POST">
         <h2>Usuario</h2>
-          <input type="text" name="UsuDoc" class="form-control" placeholder="Documento" required="">
-          <input type="text" name="UsuNom" class="form-control" placeholder="Nombre" required="">
-          <input type="password" name="UsuClave" class="form-control" placeholder="Clave" required=""><br>
-          <input type="text" name="UsuRol" class="form-control" placeholder="Rol" required="">
-          <input type="text" name="UsuEstado" class="form-control" placeholder="Estado" required="">
-          <input type="text" name="UsuImagen" class="form-control" placeholder="Imagen" required="">
-          <button class="submit-btn form-control" id="form-submit">Siguiente</button>
+          <input type="text" name="UsuDoc"  class="form-control UsuDoc" placeholder="Documento" required="">
+          <input type="text" name="UsuNom"  class="form-control UsuNom" placeholder="Nombre" required="">
+          <input type="password" name="UsuClave" class="form-control UsuClave" placeholder="Clave" required=""><br>
+          <input type="text" name="UsuRol"  class="form-control UsuRol" placeholder="Rol" required="">
+          <input type="text" name="UsuEstado"  class="form-control UsuEstado" placeholder="Estado" required="">
+          <input type="text" name="UsuImagen"  class="form-control UsuImagen" placeholder="Imagen" required="">
+          <button type="button" class="submit-btn" id="form-submit">Siguiente</button>
            <!--<input type="email" name="email" class="form-control" placeholder="Your email address" required="">
           <input type="date" name="fecha" class="form-control" placeholder="Your email address" required="">
                                

@@ -26,7 +26,7 @@ else{
     res.redirect('/');
 }
  }
-
+/*
 controller.insertar=async(req,res,next)=>{
     //console.log(req.body)
     const d=req.body.UsuDoc;
@@ -49,7 +49,7 @@ controller.insertar=async(req,res,next)=>{
         }
     });
     }
-
+*/
 
     controller.login=async(req,res,next)=>{
         const usu=await req.body.fullname;
@@ -759,6 +759,29 @@ controller.eliminar=(req,res,next)=>{
     })
 }
 
+
+controller.insertar=async(req,res,next)=>{
+    //console.log(req.body)
+    const d=req.body.dd;
+    const u=req.body.uu;
+    const c=req.body.cc;
+    const r=req.body.rr;
+    const e=req.body.ee;
+    const i=req.body.ii;
+    const password=await bcryptjs.hash(c,8)
+ 
+
+    console.log(d,u);
+    cnn.query('INSERT INTO tbusuarios SET?',{UsuDoc:d,UsuNom:u,UsuClave:password,UsuRol:r,UsuEstado:e,UsuImagen:i},(err,resbd)=>{
+        if(err){
+            next(new Error(err))
+        }
+        else{
+            //console.log(resbd);
+            res.redirect('usu')
+        }
+    });
+    }
 
 controller.actualizar=async(req,res,next)=>{
     const docx=req.body.dd;
